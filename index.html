@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meryem Ouaziz  Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#accueil" class="nav-logo">Meryem Ouaziz</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#apropos">A propos</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <!-- Dropdown Stages -->
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" onclick="scrollTo('#experiences')">Stages</button>
+      <div class="nav-dropdown-menu">
+        <button onclick="openModal('stage1'); closeMenuNav()">Stage 1ère année</button>
+        <button onclick="openModal('stage2'); closeMenuNav()">Stage 2ème année</button>
+      </div>
+    </li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <!-- Dropdown Veille -->
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" onclick="scrollTo('#veille')">Veille</button>
+      <div class="nav-dropdown-menu">
+        <button onclick="openModal('veille1'); closeMenuNav()">Intelligence Artificielle</button>
+        <button onclick="openModal('veille2'); closeMenuNav()">Juridique & Numérique</button>
+      </div>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="accueil">
+  <div class="hero-deco">MO</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dash"></div>
+      <span class="hero-eyebrow-text">BTS SIO SLAM &nbsp;&middot;&nbsp; Session 2026 &nbsp;&middot;&nbsp; Lyon EPSI</span>
+    </div>
+    <span class="hero-name">Meryem</span>
+    <span class="hero-name-em">Ouaziz</span>
+    <div class="hero-bottom">
+      <div class="hero-bottom-left">
+        <p class="hero-role">Développeuse Full Stack</p>
+        <p class="hero-desc">Passionnée par la création d'applications web et mobile. Rigoureuse et orientée résolution de problèmes, je construis des solutions fonctionnelles et bien architecturées.</p>
+        <div class="hero-btns">
+          <a href="#projets" class="btn-primary">Voir les projets</a>
+          <a href="cvMO_alternance_fullstack.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
+          <a href="BTS_SIO_Tab.xlsx" target="_blank" class="btn-secondary">Fiche Tech</a>
+           
+          
+        </div>
+      </div>
+      <div class="hero-bottom-right">
+        <div class="hero-stat"><div class="hero-stat-num">2<sup>+</sup></div><div class="hero-stat-label">Stages</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">10<sup>+</sup></div><div class="hero-stat-label">Technologies</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">6<sup>+</sup></div><div class="hero-stat-label">Projets</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÃÂ PROPOS -->
+<section id="apropos">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">00</div>
+      <div><p class="s-label">Qui suis-je ?</p><h2 class="s-title">à <em>propos</em></h2></div>
+    </div>
+    <div class="apropos-layout">
+      
+    <div class="apropos-photo-wrap">
+    <div class="apropos-photo">
+      <img src="imageCV.jpeg" alt="Meryem Ouaziz">
+    </div>
+    <div class="apropos-name-tag">Meryem Ouaziz</div>
+    <div class="apropos-role-tag">Développeuse Full Stack</div>
+      </div>
+      <div class="apropos-content">
+        <div class="apropos-bio">
+          
+          <p class="apropos-ph-label">Présentation personnelle</p>
+          <p>Étudiante en BTS SIO option SLAM à Lyon EPSI, je me passionne pour le développement d'applications web et mobile depuis le début de ma formation. Rigoureuse et curieuse, j'aime concevoir des solutions techniques qui répondent à de vrais besoins utilisateurs — que ce soit une application de gestion de prêts de matériel ou une plateforme de recherche de voyages.</p>
+          <p style="margin-top:10px;">Actuellement en deuxième année, j'ai eu l'opportunité de mettre en pratique mes compétences lors de deux stages enrichissants, où j'ai pu travailler sur des projets concrets en équipe. Mon objectif est de poursuivre en Bachelor Développement Logiciel tout en approfondissant mes compétences en développement full stack et en gestion de projet.</p>
+        </div>
+        <div class="apropos-infos">
+          <div class="apropos-info-card">
+            <div class="apropos-info-label">Formation</div>
+            <div class="apropos-info-val">BTS SIO SLAM + Bachelor Dev.</div>
+          </div>
+          <div class="apropos-info-card">
+            <div class="apropos-info-label">Ecole</div>
+            <div class="apropos-info-val">Lyon EPSI</div>
+          </div>
+          <div class="apropos-info-card">
+            <div class="apropos-info-label">Localisation</div>
+            <div class="apropos-info-val">Lyon, France</div>
+          </div>
+          <div class="apropos-info-card">
+            <div class="apropos-info-label">Recherche</div>
+            <div class="apropos-info-val">Alternance 2026&ndash;2027</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">04</div>
+      <div><p class="s-label">Itinéraire</p><h2 class="s-title">Mon <em>parcours</em></h2></div>
+    </div>
+    <div class="parcours-grid">
+      <div>
+        <p class="parcours-col-label">Formation</p>
+        <div class="parcours-row"><div class="parcours-date">2024 &mdash; 2026</div><div class="parcours-name">BTS SIO &mdash; Option SLAM</div><div class="parcours-lieu">Lyon EPSI</div></div>
+        <div class="parcours-row"><div class="parcours-date">2024 &mdash; 2027</div><div class="parcours-name">Bachelor Développement Logiciel</div><div class="parcours-lieu">Lyon EPSI</div></div>
+        <div class="parcours-row"><div class="parcours-date">2023 &mdash; 2024</div><div class="parcours-name">Baccalauréat Scientifique &mdash; Sciences Mathématiques</div><div class="parcours-lieu">Lycée André Gide</div></div>
+      </div>
+      <div>
+        <p class="parcours-col-label">Soft skills & langues</p>
+        <div class="parcours-row"><div class="parcours-name">Organisation &mdash; Adaptabilité</div><div class="parcours-lieu">Gestion des priorités et flexibilité</div></div>
+        <div class="parcours-row"><div class="parcours-name">Communication &mdash; Esprit d'équipe</div><div class="parcours-lieu">Collaboration en environnement Agile</div></div>
+        <div class="parcours-row"><div class="parcours-name">Français &mdash; langue maternelle</div><div class="parcours-lieu">Anglais &mdash; niveau intermédiaire</div></div>
+        <div class="parcours-row"><div class="parcours-name">Badminton &mdash; Photographie</div><div class="parcours-lieu">Centres d'intérét</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPéTENCES -->
+<section id="competences">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">01</div>
+      <div><p class="s-label">Savoir-faire</p><h2 class="s-title">Mes <em>compétences</em></h2></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-num">01 /</div><div class="skill-name">Développement Web</div><div class="skill-tags"><span class="stag">PHP</span><span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">JavaScript</span><span class="stag">Node.js</span><span class="stag">APIs REST</span></div></div>
+      <div class="skill-card"><div class="skill-num">02 /</div><div class="skill-name">Frameworks Frontend</div><div class="skill-tags"><span class="stag">React.js</span><span class="stag">Vue.js</span><span class="stag">Symfony</span><span class="stag">Bootstrap</span></div></div>
+      <div class="skill-card"><div class="skill-num">03 /</div><div class="skill-name">Backend & Scripts</div><div class="skill-tags"><span class="stag">Python</span><span class="stag">Flask</span><span class="stag">SQLAlchemy</span><span class="stag">AJAX</span></div></div>
+      <div class="skill-card"><div class="skill-num">04 /</div><div class="skill-name">Mobile</div><div class="skill-tags"><span class="stag">Flutter</span><span class="stag">Android Studio</span><span class="stag">Dart</span></div></div>
+      <div class="skill-card"><div class="skill-num">05 /</div><div class="skill-name">Bases de données</div><div class="skill-tags"><span class="stag">MySQL</span><span class="stag">SQLite</span><span class="stag">MCD / MLD</span><span class="stag">Jointures</span></div></div>
+      <div class="skill-card"><div class="skill-num">06 /</div><div class="skill-name">Systemes & Outils</div><div class="skill-tags"><span class="stag">Linux</span><span class="stag">VirtualBox</span><span class="stag">Git</span><span class="stag">Tkinter</span><span class="stag">OpenCV</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH MARQUEE -->
+<div class="tech-marquee-wrap">
+  <div class="tech-marquee-track-outer">
+    <div class="tech-marquee-track">
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span>React.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span>Vue.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask"><span>Flask</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"><span>Flutter</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart"><span>Dart</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg" alt="Symfony"><span>Symfony</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"><span>Android Studio</span></div>
+      <!-- Duplicate pour boucle infinie -->
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span>React.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span>Vue.js</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask"><span>Flask</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"><span>Flutter</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart"><span>Dart</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg" alt="Symfony"><span>Symfony</span></div>
+      <div class="tech-marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"><span>Android Studio</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPÃÂRIENCES -->
+<section id="experiences">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">02</div>
+      <div><p class="s-label">Terrain professionnel</p><h2 class="s-title">Mes <em>stages</em></h2></div>
+    </div>
+    <div class="exp-list">
+      <!-- STAGE 1ÃÂ¨re annÃÂ©e -->
+      <div class="exp-row">
+        <div>
+          <div class="exp-date">Avril &mdash; Juin 2025</div>
+          <span class="exp-badge">1ère année</span>
+        </div>
+        <div>
+          <div class="exp-title">Technicienne informatique</div>
+          <div class="exp-lieu">Campus René Cassin &mdash; Lyon</div>
+          <div class="exp-desc">Support technique et création d'une application de gestion de préts de matériel informatique.</div>
+          <div class="exp-techs"><span class="exp-tech">PHP</span><span class="exp-tech">MySQL</span><span class="exp-tech">JavaScript AJAX</span><span class="exp-tech">HTML5 / CSS3</span><span class="exp-tech">Python Flask</span></div>
+        </div>
+        <div>
+          <div class="exp-result">Automatisation du suivi des préts et amélioration de la réactivité du support technique.</div>
+          <button class="exp-cta" onclick="openModal('stage1')">Voir le détail &rarr;</button>
+        </div>
+      </div>
+      <!-- STAGE 2ÃÂ¨me annÃÂ©e -->
+      <div class="exp-row">
+        <div>
+          <div class="exp-date">Janvier &mdash; Février 2026</div>
+          <span class="exp-badge">2ème année</span>
+        </div>
+        <div>
+          <div class="exp-title">Développeuse Full-Stack</div>
+          <div class="exp-lieu">Lyon</div>
+          <div class="exp-desc">Création d'une plateforme de recherche et comparaison de voyages &mdash; ZoomTravel.</div>
+          <div class="exp-techs"><span class="exp-tech">React.js</span><span class="exp-tech">Python Flask</span><span class="exp-tech">SQLAlchemy</span></div>
+        </div>
+        <div>
+          <div class="exp-result">Application fonctionnelle avec moteur de recherche dynamique, filtrage budgétaire et système de favoris sécurisé.</div>
+          <button class="exp-cta" onclick="openModal('stage2')">Voir le détail &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL STAGE 1 -->
+<div class="modal-overlay" id="modal-stage1" onclick="closeModalOverlay(event,'stage1')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('stage1')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">01</div>
+      <div>
+        <div class="modal-title">Stage 1ère année</div>
+        <div class="modal-context">Campus René Cassin &mdash; Lyon &mdash; Avril / Juin 2025</div>
+      </div>
+      <span class="proj-status" style="margin-left:auto;flex-shrink:0;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--border);color:var(--gris2)">Stage</span>
+    </div>
+    <div class="modal-slider">
+      <div class="modal-slides" id="slides-stage1">
+        <div class="modal-slide"><img src="selection_role.png" alt="Sélection du rôle" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="materiel_disp.png" alt="Matériel disponible" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="tableau_it.png"alt="Tableau de bord IT" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+      </div>
+      <button class="modal-arr modal-arr-prev" onclick="prevSlide('stage1')">&#8592;</button>
+      <button class="modal-arr modal-arr-next" onclick="nextSlide('stage1')">&#8594;</button>
+      <div class="modal-dots" id="dots-stage1"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec-title">Présentation de l'entreprise</div>
+      <p class="modal-text">Le Campus René Cassin est un campus post-bac situé à Lyon, regroupant plusieurs écoles et formations supérieures. Le service informatique du campus assure la gestion et la maintenance de l'ensemble du parc informatique réparti sur deux bâtiments : <strong>Kéclair</strong> et <strong>Berthelet</strong>. Ce service IT prend en charge tout ce qui est lié à l'informatique : équipements, réseaux, logiciels et support aux utilisateurs (étudiants et enseignants).</p>
+
+      <div class="modal-sec-title">Problématique</div>
+      <p class="modal-text">Le service IT gérait les prêts de matériel informatique (ordinateurs portables, claviers, souris, caméras web...) de manière manuelle, sans outil dédié. Cela entraînait des pertes de matériel, une mauvaise visibilité sur les disponibilités et des difficultés à suivre qui avait emprunté quoi et pour combien de temps. Le campus avait besoin d'une solution numérique pour centraliser et automatiser ce suivi.</p>
+
+      <div class="modal-sec-title">Solution apportée</div>
+      <p class="modal-text">J'ai développé un <strong>système web de réservation de matériel informatique</strong> avec deux profils utilisateurs distincts :</p>
+      <div class="modal-cols">
+        <div>
+          <div class="modal-col-title">Profil Enseignant</div>
+          <ul class="modal-list">
+            <li>Consulter le matériel disponible en temps réel</li>
+            <li>Effectuer une demande de réservation avec dates et description</li>
+            <li>Suivre le statut de ses réservations (acceptée / refusée)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="modal-col-title">Profil Personnel IT</div>
+          <ul class="modal-list">
+            <li>Tableau de bord avec statistiques (matériel total, demandes en attente, approuvées, rejetées)</li>
+            <li>Approuver ou rejeter les demandes de réservation</li>
+            <li>Gérer l'inventaire complet du matériel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-sec-title">Autres missions réalisées</div>
+      <p class="modal-text">En parallèle du développement, j'ai effectué plusieurs missions terrain en collaboration avec mon tuteur et l'équipe IT : interventions en classe pour le dépannage matériel et logiciel auprès des enseignants, formatage de postes informatiques, installation et configuration de systèmes d'exploitation Windows, et participation à la mise en réseau des postes dans les deux bâtiments (Kéclair et Berthelet).</p>
+
+      <div class="modal-sec-title">Ce que j'ai retenu</div>
+      <p class="modal-text">Ce stage m'a permis de développer mes compétences techniques en développement web full stack (PHP, MySQL, JavaScript AJAX) tout en découvrant le métier de technicienne informatique sur le terrain. Travailler avec un tuteur et une équipe IT m'a appris à communiquer efficacement, à prioriser les interventions urgentes et à m'adapter aux besoins réels des utilisateurs. J'ai également renforcé mon autonomie et ma rigueur dans la gestion des tâches.</p>
+
+      <div class="modal-sec-title">Technologies utilisées</div>
+      <div class="modal-tech-row">
+        <span class="ptag ptag-dark">PHP</span>
+        <span class="ptag ptag-rose">MySQL</span>
+        <span class="ptag ptag-light">JavaScript AJAX</span>
+        <span class="ptag ptag-light">HTML5 / CSS3</span>
+        <span class="ptag ptag-light">Python Flask</span>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- MODAL STAGE 2 -->
+<div class="modal-overlay" id="modal-stage2" onclick="closeModalOverlay(event,'stage2')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('stage2')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">02</div>
+      <div>
+        <div class="modal-title">Stage 2ème année</div>
+        <div class="modal-context">Lyon &mdash; Janvier / Février 2026</div>
+      </div>
+      <span class="proj-status" style="margin-left:auto;flex-shrink:0;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--border);color:var(--gris2)">Stage</span>
+    </div>
+
+    <div class="modal-slider">
+      <div class="modal-slides" id="slides-stage2">
+        <div class="modal-slide"><img src="page_accuiel.png" alt="Page d'accueil" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="destination.png" alt="Destination" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="favoris.png" alt="Favoris" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+      </div>
+      <button class="modal-arr modal-arr-prev" onclick="prevSlide('stage2')">&#8592;</button>
+      <button class="modal-arr modal-arr-next" onclick="nextSlide('stage2')">&#8594;</button>
+      <div class="modal-dots" id="dots-stage2"></div>
+    </div>
+   
+    <div class="modal-body">
+
+     <div class="modal-sec-title">Contexte du stage</div>
+      <p class="modal-text">Stage de 2ème année réalisé à Lyon sous la supervision d'un tuteur. L'objectif était de concevoir et développer de A à Z une plateforme web complète de recherche et comparaison de voyages : <strong>ZoomTravel</strong>.</p>
+
+      <div class="modal-sec-title">Problématique</div>
+      <p class="modal-text">Il n'existait pas d'outil simple permettant de rechercher des voyages par destination, de les comparer selon son budget et de sauvegarder ses favoris. L'objectif était de créer une application intuitive, sécurisée et fonctionnelle répondant à ces besoins.</p>
+
+      <div class="modal-sec-title">Solution développée — ZoomTravel</div>
+      <div class="modal-cols">
+        <div>
+          <div class="modal-col-title">Frontend — React.js</div>
+          <ul class="modal-list">
+            <li>Recherche de voyages par destination</li>
+            <li>Comparaison de voyages et affichage des résultats</li>
+            <li>Filtrage dynamique par budget</li>
+            <li>Système de favoris sécurisé</li>
+          </ul>
+        </div>
+        <div>
+          <div class="modal-col-title">Backend — Python Flask</div>
+          <ul class="modal-list">
+            <li>Conception de l'API REST</li>
+            <li>Gestion de la base de données avec SQLAlchemy</li>
+            <li>Authentification et sécurisation des données</li>
+            <li>Moteur de recherche dynamique</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-sec-title">Ce que j'ai retenu</div>
+      <p class="modal-text">Ce stage m'a permis de maîtriser le développement full-stack en conditions réelles : React.js côté frontend, Python Flask et SQLAlchemy côté backend. Travailler avec un tuteur m'a appris à structurer mon code, à respecter des délais et à présenter mon travail. J'ai gagné en autonomie et en rigueur sur l'ensemble du cycle de développement d'une application web.</p>
+      <div class="modal-tech-row">
+        <span class="ptag ptag-dark">React.js</span>
+        <span class="ptag ptag-rose">Python Flask</span>
+        <span class="ptag ptag-light">SQLAlchemy</span>
+      </div>
+      
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJETS -->
+<section id="projets">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">03</div>
+      <div><p class="s-label">Réalisations E6 & Académiques</p><h2 class="s-title">Mes <em>projets</em></h2></div>
+    </div>
+    <div class="projets-e6">
+      <div class="proj-card" onclick="openModal('desk')">
+        <div class="proj-top"><div class="proj-num">01</div><span class="proj-status">En cours &mdash; E6</span></div>
+        <div class="proj-title">DeskManager</div>
+        <div class="proj-context">Gestion de matériel informatique &mdash; Application desktop</div>
+        <p class="proj-desc">Application desktop permettant a une entreprise de centraliser la gestion de son parc informatique : suivi du matériel, gestion des employés et attribution des équipements.</p>
+        <div class="proj-techs"><span class="ptag ptag-dark">Python</span><span class="ptag ptag-rose">Tkinter</span><span class="ptag ptag-light">SQLite</span><span class="ptag ptag-light">POO</span></div>
+        <div class="proj-cta">Voir le projet &rarr;</div>
+      </div>
+      <div class="proj-card" onclick="openModal('gsb')">
+        <div class="proj-top"><div class="proj-num">02</div><span class="proj-status">Terminé &mdash; E6</span></div>
+        <div class="proj-title">GSB Frais</div>
+        <div class="proj-context">Gestion des frais de déplacement &mdash; Application web</div>
+        <p class="proj-desc">Application web pour le laboratoire pharmaceutique fictif Galaxy Swiss Bourdin. Les visiteurs médicaux saisissent leurs frais et les comptables les valident.</p>
+        <div class="proj-techs"><span class="ptag ptag-dark">PHP 8</span><span class="ptag ptag-rose">JavaScript</span><span class="ptag ptag-light">MySQL</span><span class="ptag ptag-light">HTML5 / CSS3</span></div>
+        <div class="proj-cta">Voir le projet &rarr;</div>
+      </div>
+    </div>
+    <p class="acad-title-row">Autres rélisations académiques</p>
+    <div class="acad-grid">
+      <div class="acad-card"><div class="acad-name">Application MVC Symfony / MySQL</div><div class="acad-desc">Entités, formulaires, sécurité basique, CRUD complet</div><div class="acad-tags"><span class="acadtag">Symfony</span><span class="acadtag">MySQL</span><span class="acadtag">PHP</span></div></div>
+      <div class="acad-card"><div class="acad-name">Application mobile Flutter</div><div class="acad-desc">écrans responsives, logique matier, stockage local</div><div class="acad-tags"><span class="acadtag">Flutter</span><span class="acadtag">Dart</span></div></div>
+      <div class="acad-card"><div class="acad-name">Lunettes intelligentes &mdash; POC OpenCV</div><div class="acad-desc">Détection en temps réel via vision par ordinateur</div><div class="acad-tags"><span class="acadtag">Python</span><span class="acadtag">OpenCV</span></div></div>
+      <div class="acad-card"><div class="acad-name">Pages interactives JavaScript</div><div class="acad-desc">DOM, événements, formulaires dynamiques, API Fetch</div><div class="acad-tags"><span class="acadtag">JavaScript</span><span class="acadtag">HTML5</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL DESKMANAGER -->
+<div class="modal-overlay" id="modal-desk" onclick="closeModalOverlay(event,'desk')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('desk')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">01</div>
+      <div><div class="modal-title">DeskManager</div><div class="modal-context">Gestion de matériel &mdash; Application desktop &mdash; E6</div></div>
+      <span class="proj-status" style="margin-left:auto;flex-shrink:0">En cours</span>
+    </div>
+    <div class="modal-slider">
+      <div class="modal-slides" id="slides-desk">
+        <div class="modal-slide"><img src="page_A.png" alt="Page d'accueil" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="page_G.png" alt="Page frais" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="page_C.png" alt="Favoris" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="page_E.png" alt="Favoris" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+      </div>
+      <button class="modal-arr modal-arr-prev" onclick="prevSlide('desk')">&#8592;</button>
+      <button class="modal-arr modal-arr-next" onclick="nextSlide('desk')">&#8594;</button>
+      <div class="modal-dots" id="dots-desk"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec-title">Description</div>
+      <p class="modal-text">Application desktop développée en Python avec Tkinter permettant à une entreprise de centraliser la gestion de son parc informatique. Architecture orientée objet, base de données SQLite locale.</p>
+      <div class="modal-cols">
+        <div>
+          <div class="modal-col-title">Fonctionnalités</div>
+          <ul class="modal-list">
+            <li>Gestion des employés à ajout, modification, liste</li>
+            <li>Gestion du matériel avec type, marque, modéle et numéro de série</li>
+            <li>Attribution du matériel à un employé avec date</li>
+            <li>Interface Tkinter claire et intuitive</li>
+            <li>Base de données SQLite locale</li>
+          </ul>
+        </div>
+        <div>
+          <div class="modal-col-title">Compétences mobilisées</div>
+          <ul class="modal-list">
+            <li>Analyse du besoin client</li>
+            <li>Conception MCD et diagramme de classes</li>
+            <li>Développement en programmation orientée objet</li>
+            <li>Gestion base de données SQLite</li>
+            <li>Rélisation d'une interface utilisateur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-sec-title">Technologies</div>
+      <div class="modal-tech-row"><span class="ptag ptag-dark">Python</span><span class="ptag ptag-rose">Tkinter</span><span class="ptag ptag-light">SQLite</span><span class="ptag ptag-light">POO</span></div>
+      <div class="modal-footer">
+        <a href="https://github.com/ouazizmeryema-cpu/deskmanger_meryem" class="modal-btn modal-btn-dark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Voir sur GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL GSB -->
+<div class="modal-overlay" id="modal-gsb" onclick="closeModalOverlay(event,'gsb')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('gsb')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">02</div>
+      <div><div class="modal-title">GSB Frais</div><div class="modal-context">Gestion des frais &mdash; Application web &mdash; E6</div></div>
+      <span class="proj-status" style="margin-left:auto;flex-shrink:0">En cours</span>
+    </div>
+    <div class="modal-slider">
+      <div class="modal-slides" id="slides-gsb">
+       <div class="modal-slide"><img src="page_connexion.png" alt="Page d'accueil" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="page_frais.png" alt="Page frais" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+        <div class="modal-slide"><img src="validation.png" alt="Favoris" style="width:100%;height:260px;object-fit:contain;background:#f3efe8;display:block;"></div>
+      </div>
+      <button class="modal-arr modal-arr-prev" onclick="prevSlide('gsb')">&#8592;</button>
+      <button class="modal-arr modal-arr-next" onclick="nextSlide('gsb')">&#8594;</button>
+      <div class="modal-dots" id="dots-gsb"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec-title">Description</div>
+      <p class="modal-text">Application web pour le laboratoire pharmaceutique fictif Galaxy Swiss Bourdin. Deux profils : visiteurs médicaux qui saisissent leurs frais, et comptables qui les valident et generent des rapports.</p>
+      <div class="modal-cols">
+        <div>
+          <div class="modal-col-title">Fonctionnalités</div>
+          <ul class="modal-list">
+            <li>Authentification sécurisée visiteurs et comptables</li>
+            <li>Saisie des frais forfaitaires et hors forfait</li>
+            <li>Validation, refus et suivi des paiements</li>
+            <li>Génération de rapports mensuels et annuels</li>
+            <li>Hachage des mots de passe</li>
+          </ul>
+        </div>
+        <div>
+          <div class="modal-col-title">Compétences mobilisées</div>
+          <ul class="modal-list">
+            <li>Développement web full stack PHP / MySQL</li>
+            <li>Sécurisation d'une application web</li>
+            <li>Gestion des sessions et authentification</li>
+            <li>Conception et requetes base de données</li>
+            <li>Validation des données cté client (JS)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-sec-title">Technologies</div>
+      <div class="modal-tech-row"><span class="ptag ptag-dark">PHP 8</span><span class="ptag ptag-rose">JavaScript</span><span class="ptag ptag-light">MySQL</span><span class="ptag ptag-light">HTML5 / CSS3</span><span class="ptag ptag-light">Hachage</span></div>
+      <div class="modal-footer">
+        <a href="https://github.com/ouazizmeryema-cpu/projet_E6_gsb_frais" class="modal-btn modal-btn-dark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Voir sur GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- VEILLE TECHNOLOGIQUE -->
+<section id="veille">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">05</div>
+      <div><p class="s-label">Curiosité &amp; actualité</p><h2 class="s-title">Veille <em>technologique</em></h2></div>
+    </div>
+    <div class="veille-grid">
+      <div class="veille-card" onclick="openModal('veille1')">
+        <div class="veille-card-num">01</div>
+        <div class="veille-card-label">Veille technologique</div>
+        <div class="veille-card-title">Intelligence Artificielle</div>
+        <p class="veille-card-desc">Évolutions récentes de l'IA, ses outils, son impact sur le développement logiciel et les enjeux éthiques et sociaux qu'elle soulève.</p>
+        <span class="veille-card-tag">Disponible</span>
+        <span class="veille-card-cta">Voir la veille &rarr;</span>
+      </div>
+      <div class="veille-card" onclick="openModal('veille2')">
+        <div class="veille-card-num">02</div>
+        <div class="veille-card-label">Veille juridique</div>
+        <div class="veille-card-title">Droit &amp; Numérique</div>
+        <p class="veille-card-desc">Actualités juridiques liées au numérique : RGPD, cybercriminalité, propriété intellectuelle, droits des utilisateurs en ligne.</p>
+        <span class="veille-card-tag">Disponible</span>
+        <span class="veille-card-cta">Voir la veille &rarr;</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- MODAL VEILLE 1 : IA -->
+<div class="modal-overlay" id="modal-veille1" onclick="closeModalOverlay(event,'veille1')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('veille1')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">01</div>
+      <div>
+        <div class="modal-title">Intelligence Artificielle</div>
+        <div class="modal-context">Veille technologique &mdash; Session 2026</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec-title">Introduction</div>
+      <p class="modal-text">J'ai choisi de réaliser ma veille technologique sur le thème de l'Intelligence Artificielle (IA), un domaine en pleine évolution qui transforme profondément les métiers du développement informatique. Pour mener cette veille, j'ai utilisé <strong>Feedly</strong>, un agrégateur de flux RSS qui me permet de suivre automatiquement les publications de sources spécialisées et d'être alertée des dernières actualités en temps réel.</p>
+ 
+      <div class="modal-sec-title">L'IA au passé</div>
+      <p class="modal-text">L'intelligence artificielle est un domaine né dans les années 1950, lorsque le mathématicien Alan Turing pose les premières bases théoriques avec sa célèbre question : « Les machines peuvent-elles penser ? ». Dans les années 1980-1990, les systèmes experts permettent d'automatiser certaines décisions, mais restent limités. C'est l'essor du <strong>deep learning</strong> dans les années 2010, grâce à la puissance des GPU et à la disponibilité de grandes quantités de données, qui marque un tournant décisif. Des modèles comme AlphaGo (Google DeepMind, 2016) ou GPT-2 (OpenAI, 2019) illustrent cette accélération.</p>
+ 
+      <div class="modal-sec-title">L'IA au présent</div>
+      <p class="modal-text">Aujourd'hui, l'IA est omniprésente dans notre quotidien. Les outils génératifs comme <strong>ChatGPT</strong> (OpenAI), <strong>Gemini</strong> (Google), <strong>Copilot</strong> (Microsoft) ou <strong>Midjourney</strong> permettent de générer du texte, du code et des images de façon impressionnante. Dans le développement logiciel, GitHub Copilot assiste les développeurs en suggérant du code en temps réel, ce qui augmente significativement la productivité. Les entreprises intègrent également l'IA dans leurs processus métier : automatisation, analyse de données, service client avec les chatbots, etc.</p>
+ 
+      <div class="modal-sec-title">L'IA au futur &amp; enjeux</div>
+      <p class="modal-text">Les perspectives sont immenses mais soulèvent des questions importantes. On parle de plus en plus d'<strong>IA générale</strong> (AGI), capable de réaliser toutes les tâches cognitives humaines. Sur le plan éthique, les risques de biais algorithmiques, de désinformation via les deepfakes et d'impact sur l'emploi sont des sujets de débat majeurs. En Europe, l'<strong>AI Act</strong> (règlement européen sur l'IA, adopté en 2024) vise à encadrer l'utilisation de l'IA selon les niveaux de risque. Pour les développeurs, l'IA représente à la fois un outil puissant et une compétence incontournable à maîtriser.</p>
+ 
+      <div class="modal-sec-title">Sources consultées</div>
+      <p class="modal-text">Ma veille a été réalisée via <strong>Feedly</strong> en suivant les flux RSS des sources suivantes :</p>
+      <div class="modal-tech-row" style="flex-wrap:wrap;gap:8px;margin-top:8px;">
+        <span class="ptag ptag-light">Le Monde Informatique</span>
+        <span class="ptag ptag-light">01net.com</span>
+        <span class="ptag ptag-light">MIT Technology Review</span>
+        <span class="ptag ptag-light">OpenAI Blog</span>
+        <span class="ptag ptag-light">Journal du Net</span>
+        <span class="ptag ptag-light">AI Act — EUR-Lex</span>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- MODAL VEILLE 2 : JURIDIQUE -->
+<div class="modal-overlay" id="modal-veille2" onclick="closeModalOverlay(event,'veille2')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('veille2')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-num">02</div>
+      <div>
+        <div class="modal-title">Droit &amp; Numérique</div>
+        <div class="modal-context">Veille juridique &mdash; Session 2026</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-sec-title">Introduction</div>
+      <p class="modal-text">Ma veille juridique porte sur le droit du numérique, un domaine en constante évolution face aux défis posés par les nouvelles technologies. Comme pour ma veille technologique, j'ai utilisé <strong>Feedly</strong> pour suivre en continu les actualités juridiques liées au numérique : nouvelles lois, décisions de justice, recommandations de la CNIL et publications officielles.</p>
+ 
+      <div class="modal-sec-title">Le RGPD</div>
+      <p class="modal-text">Le <strong>Règlement Général sur la Protection des Données (RGPD)</strong>, entré en vigueur en mai 2018, est le texte fondamental du droit numérique européen. Il encadre la collecte, le traitement et la conservation des données personnelles des citoyens européens. Ses principes clés sont : le consentement explicite de l'utilisateur, le droit d'accès et de suppression des données (droit à l'oubli), la portabilité des données et la notification obligatoire en cas de violation. Les entreprises non conformes s'exposent à des amendes pouvant atteindre <strong>4% du chiffre d'affaires mondial</strong> ou 20 millions d'euros. En France, c'est la <strong>CNIL</strong> qui veille à l'application du RGPD.</p>
+ 
+      <div class="modal-sec-title">Cybercriminalité</div>
+      <p class="modal-text">La cybercriminalité désigne l'ensemble des infractions commises via les systèmes informatiques. En France, elle est encadrée par la <strong>loi Godfrain (1988)</strong>, codifiée dans le Code pénal aux articles 323-1 à 323-7. Les principales infractions sont : l'accès frauduleux à un système informatique, la perturbation ou le sabotage d'un système, et la diffusion de logiciels malveillants. En 2023, les attaques par <strong>ransomware</strong> (rançongiciels) ont fortement touché les hôpitaux et collectivités françaises. L'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) publie régulièrement des recommandations pour se protéger.</p>
+ 
+      <div class="modal-sec-title">Propriété intellectuelle &amp; licences</div>
+      <p class="modal-text">Le code source est protégé par le <strong>droit d'auteur</strong> dès sa création, sans dépôt nécessaire. En France, c'est le Code de la propriété intellectuelle (CPI) qui s'applique. Dans le monde du développement, les <strong>licences open source</strong> définissent les conditions d'utilisation du code : la licence <strong>MIT</strong> est permissive (usage libre, même commercial), la <strong>GPL</strong> impose que tout code dérivé soit également open source. Il est essentiel pour un développeur de vérifier les licences des bibliothèques utilisées afin d'éviter tout litige. Les brevets logiciels, bien qu'encadrés en Europe, restent une source de contentieux au niveau international.</p>
+ 
+      <div class="modal-sec-title">Sources consultées</div>
+      <p class="modal-text">Ma veille a été réalisée via <strong>Feedly</strong> en suivant les flux RSS des sources suivantes :</p>
+      <div class="modal-tech-row" style="flex-wrap:wrap;gap:8px;margin-top:8px;">
+        <span class="ptag ptag-light">CNIL.fr</span>
+        <span class="ptag ptag-light">Légifrance.gouv.fr</span>
+        <span class="ptag ptag-light">ANSSI.gouv.fr</span>
+        <span class="ptag ptag-light">Droit &amp; Technologies</span>
+        <span class="ptag ptag-light">Le Monde du Droit</span>
+        <span class="ptag ptag-light">EUR-Lex (RGPD)</span>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="s-top">
+      <div class="s-num">06</div>
+      <div><p class="s-label">Disponible</p><h2 class="s-title">Me <em>contacter</em></h2></div>
+    </div>
+    <div class="contact-layout">
+      <div>
+        <div class="contact-headline">Travaillons<em>ensemble.</em></div>
+        <p class="contact-sub">Disponible pour toute question sur mon portfolio ou pour une opportunité d'alternance en développement logiciel à partir de 2026&ndash;2027.</p>
+        <div class="contact-items">
+          <a href="mailto:meryem.ouaziz@ecoles_epsi.net" class="contact-item"><span class="contact-item-label">Email</span><span class="contact-item-val">ouazizmeryema@gmail.com</span><span class="contact-item-arrow">&#8594;</span></a>
+          <a href="tel:+33624512890" class="contact-item"><span class="contact-item-label">Téléphone</span><span class="contact-item-val">+06 24 51 28 90</span><span class="contact-item-arrow">&#8594;</span></a>
+          <div class="contact-item"><span class="contact-item-label">Localisation</span><span class="contact-item-val">Lyon, France</span></div>
+          <a href="cvMO_alternance_fullstack.pdf" download class="contact-item"><span class="contact-item-label">CV</span><span class="contact-item-val">Télécharger mon CV</span><span class="contact-item-arrow">&#8594;</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="contact-info-box">
+          <div class="contact-info-title">Informations</div>
+          <div class="info-row"><span class="info-label">Formation</span><span class="info-val">BTS SIO SLAM</span></div>
+          <div class="info-row"><span class="info-label">Ecole</span><span class="info-val">Lyon EPSI</span></div>
+          <div class="info-row"><span class="info-label">Session</span><span class="info-val">2026</span></div>
+          <div class="info-row"><span class="info-label">Recherche</span><span class="info-val">Alternance 2026&ndash;2027</span></div>
+          <div class="info-row"><span class="info-label">Localisation</span><span class="info-val">Lyon, France</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <p>Meryem Ouaziz &mdash; Portfolio BTS SIO SLAM</p>
+  <p>Lyon EPSI &middot; Session 2026</p>
+</footer>
+ 
+<script>
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
+  });
+ 
+  // Menu mobile
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function closeMenuNav() {
+    document.getElementById('navLinks').classList.remove('open');
+  }
+  document.querySelectorAll('.nav-links > li > a').forEach(a => a.addEventListener('click', closeMenuNav));
+ 
+  // Scroll smooth depuis nav dropdown
+  function scrollTo(id) {
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+ 
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 90);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.skill-card, .exp-row, .proj-card, .acad-card, .parcours-row').forEach(el => observer.observe(el));
+ 
+  // Modals
+  const slideIdx = {};
+  function openModal(id) {
+    document.getElementById('modal-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (document.getElementById('slides-' + id)) {
+      buildDots(id);
+      goTo(id, 0);
+    }
+  }
+  function closeModal(id) {
+    document.getElementById('modal-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOverlay(e, id) {
+    if (e.target === document.getElementById('modal-' + id)) closeModal(id);
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      ['desk','gsb','stage1','stage2','veille1','veille2'].forEach(id => {
+        const el = document.getElementById('modal-' + id);
+        if (el && el.classList.contains('open')) closeModal(id);
+      });
+    }
+  });
+ 
+  function buildDots(id) {
+    const wrap = document.getElementById('dots-' + id);
+    if (!wrap) return;
+    const n = document.getElementById('slides-' + id).children.length;
+    wrap.innerHTML = '';
+    for (let i = 0; i < n; i++) {
+      const b = document.createElement('button');
+      b.className = 'modal-dot' + (i === 0 ? ' active' : '');
+      b.onclick = () => goTo(id, i);
+      wrap.appendChild(b);
+    }
+  }
+  function goTo(id, i) {
+    const sl = document.getElementById('slides-' + id);
+    if (!sl) return;
+    const n = sl.children.length;
+    slideIdx[id] = (i + n) % n;
+    sl.style.transform = 'translateX(-' + slideIdx[id] * 100 + '%)';
+    document.querySelectorAll('#dots-' + id + ' .modal-dot').forEach((d, j) => d.classList.toggle('active', j === slideIdx[id]));
+  }
+  function nextSlide(id) { goTo(id, (slideIdx[id] || 0) + 1); }
+  function prevSlide(id) { goTo(id, (slideIdx[id] || 0) - 1); }
+</script>
+</body>
+</html>
+ 
